@@ -1,6 +1,33 @@
 @use "variables" as *;
 
 .site-header {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  .top_nav {
     display: flex;
-    justify-content: center;
+    ul {
+      display: flex;
+      gap: 15px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          padding: 8px 12px;
+          border-radius: 50px;
+          color: $ink-soft;
+          font-weight: 600;
+          transition: 0.2s ease;
+          &:hover {
+            color: $green-deep;
+            background-color: $green-tint;
+          }
+        }
+        a.active {
+            color: $green-deep;
+            background-color: $green-tint;
+        }
+      }
+    }
+  }
 }
