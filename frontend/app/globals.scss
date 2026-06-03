@@ -1,14 +1,5 @@
 /* app/globals.css */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap");
-
-:root {
-  --paper: #faf6ef;
-  --ink: #1c1a17;
-  --muted: #6b655c;
-  --accent: #b3431f;
-  --line: #e4ddd1;
-  --max: 720px;
-}
+@use "variables" as *;
 
 * {
   box-sizing: border-box;
@@ -16,8 +7,8 @@
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
+  background: $paper;
+  color: $ink;
   font-family: "Newsreader", Georgia, serif;
   font-size: 1.125rem;
   line-height: 1.7;
@@ -27,30 +18,30 @@ body {
 /* Nagłówek / stopka */
 .site-header,
 .site-footer {
-  max-width: var(--max);
+  max-width: $max;
   margin-inline: auto;
   padding: 2rem 1.5rem;
 }
 .site-header {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid $line;
 }
 .site-header__logo {
   font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: 1.5rem;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  color: $ink;
   text-decoration: none;
 }
 .site-footer {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid $line;
   margin-top: 4rem;
-  color: var(--muted);
+  color: $muted;
   font-size: 0.95rem;
 }
 
 .container {
-  max-width: var(--max);
+  max-width: $max;
   margin-inline: auto;
   padding: 2.5rem 1.5rem 0;
 }
@@ -95,7 +86,7 @@ body {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: $accent;
 }
 .card__title {
   font-family: "Fraunces", serif;
@@ -106,26 +97,26 @@ body {
   margin: 0.4rem 0 0.6rem;
 }
 .card__title a {
-  color: var(--ink);
+  color: $ink;
   text-decoration: none;
 }
 .card__title a:hover {
-  color: var(--accent);
+  color: $accent;
 }
 .card__excerpt {
-  color: var(--muted);
+  color: $muted;
 }
 
 /* Pojedynczy wpis */
 .post__back {
   display: inline-block;
   margin-bottom: 2rem;
-  color: var(--muted);
+  color: $muted;
   text-decoration: none;
   font-size: 0.95rem;
 }
 .post__back:hover {
-  color: var(--accent);
+  color: $accent;
 }
 .post__title {
   font-family: "Fraunces", serif;
@@ -152,7 +143,7 @@ body {
   margin: 2rem 0 0.8rem;
 }
 .post__content a {
-  color: var(--accent);
+  color: $accent;
 }
 .post__content img {
   max-width: 100%;
@@ -161,10 +152,10 @@ body {
 }
 
 .empty {
-  color: var(--muted);
+  color: $muted;
 }
 .empty code {
-  background: var(--line);
+  background: $line;
   padding: 0.1em 0.4em;
   border-radius: 3px;
   font-size: 0.9em;
