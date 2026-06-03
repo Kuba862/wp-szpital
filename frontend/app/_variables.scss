@@ -4,3 +4,50 @@ $muted: #292928;
 $accent: #8d2bf0;
 $line: #000000;
 $max: 720px;
+
+// --- Tła i tekst (ciepłe neutralne) ---
+$bg:        oklch(0.985 0.007 75);   // #FDFAF5 — ciepła kość słoniowa (tło)
+$bg-sunk:   oklch(0.965 0.010 75);   // #F7F3EC — zagłębienia / sekcje
+$surface:   oklch(0.998 0.003 75);   // #FFFEFC — karty
+$ink:       oklch(0.255 0.018 55);   // #2A211B — espresso-grafit (tekst)
+$ink-soft:  oklch(0.475 0.015 58);   // #635A54 — tekst drugorzędny
+$ink-faint: oklch(0.62 0.012 60);    // #8C857F — meta / podpisy
+$line:      oklch(0.905 0.010 72);   // #E4DFD9 — linie (hairline)
+$line-soft: oklch(0.945 0.008 74);   // #F0ECE7 — jaśniejsze linie
+
+// --- Kolor wiodący: szałwiowa zieleń (zaufanie, zdrowie) ---
+$green:        oklch(0.50 0.072 168);  // #34705B
+$green-deep:   oklch(0.42 0.072 168);  // #1B5A45
+$green-tint:   oklch(0.955 0.030 168); // #DEF7EC
+$green-tint-2: oklch(0.92 0.040 168);  // #CCEEDF
+
+// --- Ciepły akcent: terakota / glina (empatia) ---
+$clay:      oklch(0.605 0.115 45);   // #BA6944
+$clay-deep: oklch(0.52 0.115 45);    // #9E502B
+$clay-tint: oklch(0.955 0.035 45);   // #FFE9DD
+
+// --- Barwy kategorii: hue (do oklch(L C $hue)) ---
+$c-aktualnosci: 168;   // zieleń            — oklch(0.58 0.11 168) = #1C8F6E
+$c-edukacja:    225;   // spokojny błękit   — oklch(0.58 0.11 225) = #0087AB
+$c-historie:    38;    // terakota          — oklch(0.58 0.11 38)  = #B16148
+$c-zespol:      120;   // ciepła oliwka     — oklch(0.58 0.11 120) = #728431
+$c-wydarzenia:  330;   // przygaszony śliwk.— oklch(0.58 0.11 330) = #9E6199
+
+// --- Barwy kategorii jako gotowe kolory (pełny odcień) ---
+$cat-aktualnosci: oklch(0.58 0.11 168);  // #1C8F6E
+$cat-edukacja:    oklch(0.58 0.11 225);  // #0087AB
+$cat-historie:    oklch(0.58 0.11 38);   // #B16148
+$cat-zespol:      oklch(0.58 0.11 120);  // #728431
+$cat-wydarzenia:  oklch(0.58 0.11 330);  // #9E6199
+
+// Mapa kategorii (klucz → hue), wygodna do pętli @each
+$categories: (
+  "aktualnosci": $c-aktualnosci,
+  "edukacja":    $c-edukacja,
+  "historie":    $c-historie,
+  "zespol":      $c-zespol,
+  "wydarzenia":  $c-wydarzenia,
+);
+
+// --- Cień (kolor bazowy, łączony z alfą .04–.13) ---
+$shadow-ink: oklch(0.4 0.02 60);     // #6B6056

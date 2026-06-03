@@ -47,3 +47,10 @@ export function getFeaturedImage(post) {
   const media = post?._embedded?.["wp:featuredmedia"]?.[0];
   return media?.source_url ?? null;
 }
+
+
+export async function getPageBySlug(slug) {
+  const res = await wpFetch(`/pages?slug=${slug}&_embed`);
+  const pages = await res.json();
+  return pages[0] ?? null;
+}

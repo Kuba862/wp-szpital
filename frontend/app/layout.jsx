@@ -1,5 +1,6 @@
 // app/layout.jsx
 // Layout opakowuje kazdą stronę.. tu trafiają <html>, fonty, nagłówek, stopka
+import Link from "next/link";
 import "./globals.scss";
 
 export const metadata = {
@@ -20,7 +21,15 @@ export default function RootLayout({ children }) {
             </head>
             <body>
                 <header className="site-header">
-                    <a href="/" className="site-header_logo">Logo</a>
+                    <div className="logo_container"><Link href="/">Logo</Link></div>
+                    <nav className="top_nav" >
+                        <ul>
+                            <Link href="/o-nas">O Nas</Link>
+                            <Link href="/">Aktualności</Link>
+                            <Link href="/">Edukacja zdrowotna</Link>
+                            <Link href="/">Historie pacjentów</Link>
+                        </ul>
+                    </nav>
                 </header>
                 <main className="container">{children}</main>
                 <footer className="footer">
