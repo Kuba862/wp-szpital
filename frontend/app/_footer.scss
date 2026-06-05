@@ -1,0 +1,11 @@
+@use "variables" as *;
+
+.footer__section {
+    display: flex;
+    background-color: $bg-sunk;
+    padding: 0 28px;
+    .footer__box {
+        display: flex;
+        padding: 16px;
+    }
+}

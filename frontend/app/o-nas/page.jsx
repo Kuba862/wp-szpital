@@ -15,10 +15,14 @@ export async function generateMetadata() {
 export default async function AboutPage() {
     const page = await getPageBySlug(SLUG);
     if (!page) notFound();
+    console.log(page)
+
+    const { title, content } = page;
 
     return (
         <article>
-            <h1>{page.title.rendered}</h1>
+            <h1>{title.rendered}</h1>
+            <div className="about__us-content" dangerouslySetInnerHTML={{ __html: content.rendered }} />
         </article>
     )
 }

@@ -1,6 +1,7 @@
 // app/layout.jsx
 // Layout opakowuje kazdą stronę.. tu trafiają <html>, fonty, nagłówek, stopka
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "./globals.scss";
 
 export const metadata = {
@@ -19,9 +20,7 @@ export default function RootLayout({ children }) {
             <body>
                 <Header />
                 <main className="container">{children}</main>
-                <footer className="footer">
-                    <p>Headless WordPress + Next.js</p>
-                </footer>
+                <Footer />
             </body>
         </html>
     );
