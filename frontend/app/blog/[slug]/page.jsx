@@ -3,6 +3,7 @@
 import { getPostBySlug, getAllSlugs, getFeaturedImage } from "@/lib/wordpress";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 // Buduje statycznie stronę dla kazdego wpisu juz na etapie `next build`.
 export async function generateStaticParams() {
@@ -33,7 +34,7 @@ export default async function PostPage({ params }) {
 
     return (
         <article className="post">
-            <a href="/" className="post__back">← Wszystkie wpisy</a>
+            <Link href="/" className="post__back">← Wszystkie wpisy</Link>
             <time className="post__date">{date}</time>
             <h1 className="post__title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
             {image && (

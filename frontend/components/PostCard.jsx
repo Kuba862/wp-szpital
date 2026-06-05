@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getFeaturedImage } from "@/lib/wordpress";
+import Link from "next/link";
 
 export default function PostCard({ post }) {
     const image = getFeaturedImage(post);
@@ -12,7 +13,7 @@ export default function PostCard({ post }) {
     return (
         <article className="card">
             {image && (
-                <a href={`/blog/${post.slug}`} className="card__media">
+                <Link href={`/blog/${post.slug}`} className="card__media">
                     <Image
                         src={image}
                         alt=""
@@ -20,14 +21,14 @@ export default function PostCard({ post }) {
                         height={340}
                         className="card__img"
                     />
-                </a>
+                </Link>
             )}
             <div className="card__body">
                 <time className="card__date">{date}</time>
                 <h2 className="card__title">
-                    <a href={`/blog/${post.slug}`}>
+                    <Link href={`/blog/${post.slug}`}>
                         <span dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                    </a>
+                    </Link>
                 </h2>
                 <div
                     className="card__excerpt"
